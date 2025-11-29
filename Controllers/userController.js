@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken'; // For JWT token generation
 import dotenv from 'dotenv';
 import User from '../Models/User.js';
 import nodemailer from 'nodemailer';
+import crypto from 'crypto'; // Import crypto as ES6 module
 
 
 
@@ -66,7 +67,7 @@ export const deleteAccount = async (req, res) => {
       from: 'pms226803@gmail.com',
       to: email,
       subject: 'Account Deletion Request Received',
-      text: `Hi ${user.name},\n\nWe have received your account deletion request. To confirm the deletion of your account, please click the link below:\n\n${deleteLink}\n\nReason: ${reason}\n\nIf you have any questions or need further assistance, please feel free to contact us at contact.varahiselfdrivecars@gmail.com.\n\nBest regards,\nYour Team`,
+      text: `Hi ${user.name},\n\nWe have received your account deletion request. To confirm the deletion of your account, please click the link below:\n\n${deleteLink}\n\nReason: ${reason}\n\nIf you have any questions or need further assistance.\n\nBest regards,\nYour Team`,
     };
 
     await transporter.sendMail(mailOptions);
