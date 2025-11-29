@@ -29,14 +29,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'http://194.164.148.244:7650',
-      'https://carrental-shop-kart.vercel.app',
-      'https://carrental-two-sooty.vercel.app',
-      'https://carrentalpromotion.vercel.app',
-      'http://194.164.148.244:3291',
-      'https://carrental-snc5.vercel.app',
-      'http://194.164.148.244:3570',
-      'https://carrental-delete-url.vercel.app',
+      'https://carservicedeleteurl.vercel.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
